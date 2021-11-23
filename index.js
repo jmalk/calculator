@@ -1,7 +1,7 @@
 const Operators = {
-  PLUS: 'PLUS',
-  MINUS: 'MINUS',
-  EQUALS: 'EQUALS'
+  PLUS: "PLUS",
+  MINUS: "MINUS",
+  EQUALS: "EQUALS",
 };
 
 const Calculator = () => {
@@ -14,7 +14,7 @@ const Calculator = () => {
 
   return {
     press: (input) => {
-      if (typeof input === 'number') {
+      if (typeof input === "number") {
         if (state.waiting) {
           state.waiting = false;
           state.previous = state.value;
@@ -45,8 +45,8 @@ const Calculator = () => {
       }
     },
 
-    getDisplay: () => state.value
-  }
+    getDisplay: () => state.value,
+  };
 };
 
 module.exports = { Calculator, Operators };
